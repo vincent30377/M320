@@ -32,8 +32,9 @@ namespace ConsolApp_001
         {
             return a * b / Calc_ggT(a, b);
         }
-        
 
+
+        
 
     }
 }
