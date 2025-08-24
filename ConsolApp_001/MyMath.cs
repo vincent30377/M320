@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsolApp_001;
 
 namespace ConsolApp_001
 {
     internal class MyMath
     {
-        static internal int Addiere(int a, int b)
-        {
-            return a + 2 * b; 
-        }
-
         static internal int Calc_ggT(int a, int b)
         {
-            int z;
-
-            ;
             while (b != 0)
             {
-                z = a % b;
+                int z = a % b;
                 a = b;
                 b = z;
             }
-
             return a;
-            
         }
+
+        static internal int Calc_ggT_r(int a, int b)
+        {
+            if (b == 0)
+                return a;
+            return Calc_ggT_r(b, a % b);
+        }
+
         static internal int Calc_kgv(int a, int b)
         {
-            return a * b / Calc_ggT(a, b);
+            if (a == 0 || b == 0) return 0;
+            int ggt = Calc_ggT(a, b);
+            return (a / ggt) * b;
         }
-
 
         static internal int ReadInt()
         {
@@ -52,38 +52,46 @@ namespace ConsolApp_001
             return $"{type} von {a} und {b} ist {result}";
         }
 
-        bool weiter = true;
-        while (weiter)
-{
-            int a = MyMath.ReadInt();
-            int b = MyMath.ReadInt();
+        static internal int[] ReadArray()
+        {
+            Console.Write("Wie viele Zahlen möchten Sie eingeben? ");
+            int n = ReadInt();
+            int[] arr = new int[n];
 
-            Console.WriteLine("Möchten Sie ggT oder kgV berechnen? (ggt/kgv) ");
-            string choice = Console.ReadLine().Trim().ToLower();
-
-            if (choice == "ggt")
+            for (int i = 0; i < n; i++)
             {
-            int ggt = MyMath.Calc_ggT(a, b);
-            int ggt_r = MyMath.Calc_ggT_r(a, b);
-            Console.WriteLine(MyMath.ShowResult("ggt", a, b, ggt));
-            Console.WriteLine($"rekursiv berechnet: {ggt_r}");
-            }
-            else if (choice == "kgv")
-            {
-            int kgv = MyMath.Calc_kgv(a, b);
-            Console.WriteLine(MyMath.ShowResult("kgv", a, b, kgv));
-            }
-            else
-            {
-            Console.WriteLine("Ungültige Auswahl!");
+                arr[i] = ReadInt();
             }
 
-            Console.Write("Neue Berechnung? (j/n): ");
-            string answer = Console.ReadLine().Trim().ToLower();
-            if (answer != "j")
-            {
-            weiter = false;
-            }
+            return arr;
+        }
+
+        static internal double Avg(int[] arr)
+        {
+            double sum = 0;
+            foreach (int val in arr) sum += val;
+            return sum / arr.Length;
+        }
+
+        static internal int Min(int[] arr)
+        {
+            int min = arr[0];
+            foreach (int val in arr) if (val < min) min = val;
+            return min;
+        }
+
+        static internal int Max(int[] arr)
+        {
+            int max = arr[0];
+            foreach (int val in arr) if (val > max) max = val;
+            return max;
+        }
+
+        static internal void Swap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
         }
     }
 }
