@@ -34,7 +34,18 @@ namespace ConsolApp_001
         }
 
 
-        
+        static internal int ReadInt()
+        {
+            int value;
+            while (true)
+            {
+                Console.Write("Bitte eine positive ganze Zahl eingeben: ");
+                if (int.TryParse(Console.ReadLine(), out value) && value > 0)
+                    return value;
+
+                Console.WriteLine("Ungültige Eingabe! Zahl muss > 0 sein.");
+            }
+        }
 
     }
 }
