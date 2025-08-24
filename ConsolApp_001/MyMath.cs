@@ -47,5 +47,43 @@ namespace ConsolApp_001
             }
         }
 
+        static internal string ShowResult(string type, int a, int b, int result)
+        {
+            return $"{type} von {a} und {b} ist {result}";
+        }
+
+        bool weiter = true;
+        while (weiter)
+{
+            int a = MyMath.ReadInt();
+            int b = MyMath.ReadInt();
+
+            Console.WriteLine("Möchten Sie ggT oder kgV berechnen? (ggt/kgv) ");
+            string choice = Console.ReadLine().Trim().ToLower();
+
+            if (choice == "ggt")
+            {
+            int ggt = MyMath.Calc_ggT(a, b);
+            int ggt_r = MyMath.Calc_ggT_r(a, b);
+            Console.WriteLine(MyMath.ShowResult("ggt", a, b, ggt));
+            Console.WriteLine($"rekursiv berechnet: {ggt_r}");
+            }
+            else if (choice == "kgv")
+            {
+            int kgv = MyMath.Calc_kgv(a, b);
+            Console.WriteLine(MyMath.ShowResult("kgv", a, b, kgv));
+            }
+            else
+            {
+            Console.WriteLine("Ungültige Auswahl!");
+            }
+
+            Console.Write("Neue Berechnung? (j/n): ");
+            string answer = Console.ReadLine().Trim().ToLower();
+            if (answer != "j")
+            {
+            weiter = false;
+            }
+        }
     }
 }
