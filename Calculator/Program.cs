@@ -4,15 +4,15 @@
 
     class Calculator
     {
-        private int lastResult = 0; // interner Zustand
+        private int lastResult = 0; 
 
-        // Methoden mit zwei Parametern
+        
         public int Add(int a, int b) { lastResult = a + b; return lastResult; }
         public int Sub(int a, int b) { lastResult = a - b; return lastResult; }
         public int Mul(int a, int b) { lastResult = a * b; return lastResult; }
         public int Div(int a, int b) { lastResult = a / b; return lastResult; }
 
-        // Methoden mit einem Parameter (nutzt lastResult als ersten Operand)
+
         public int Add(int b) { lastResult = lastResult + b; return lastResult; }
         public int Sub(int b) { lastResult = lastResult - b; return lastResult; }
         public int Mul(int b) { lastResult = lastResult * b; return lastResult; }
