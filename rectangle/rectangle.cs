@@ -81,7 +81,7 @@ namespace rectangle
                 return Winkelsumme;
             }
 
-            // Zeichnet nur den Rand des Rechtecks in der Konsole mit 'X'
+
             public void ZeichneRec()
             {
                 if (length <= 0 || width <= 0) return;
