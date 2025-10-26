@@ -13,7 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbeitsdossier320", "Arbeit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klassendiagramm01", "Klassendiagramm01\Klassendiagramm01.csproj", "{B9390002-87CF-483D-A5B8-72ACCFA14D9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wut", "Wut\Wut.csproj", "{5B216E82-DBDE-4C10-8502-C42E034C16A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Wut\Shapes.csproj", "{5B216E82-DBDE-4C10-8502-C42E034C16A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOn", "HandsOn\HandsOn.csproj", "{487274F3-9F78-4DA7-A9FA-D45420153798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometrischeFromen", "..\GeometrischeFromen\GeometrischeFromen\GeometrischeFromen.csproj", "{04BE9875-4DB3-4FF1-1EC8-4D64F4ED3143}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{5B216E82-DBDE-4C10-8502-C42E034C16A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B216E82-DBDE-4C10-8502-C42E034C16A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B216E82-DBDE-4C10-8502-C42E034C16A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487274F3-9F78-4DA7-A9FA-D45420153798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487274F3-9F78-4DA7-A9FA-D45420153798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487274F3-9F78-4DA7-A9FA-D45420153798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487274F3-9F78-4DA7-A9FA-D45420153798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BE9875-4DB3-4FF1-1EC8-4D64F4ED3143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BE9875-4DB3-4FF1-1EC8-4D64F4ED3143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BE9875-4DB3-4FF1-1EC8-4D64F4ED3143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BE9875-4DB3-4FF1-1EC8-4D64F4ED3143}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
